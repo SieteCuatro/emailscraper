@@ -31,4 +31,4 @@ This project is a web scraper tool developed in Node.js that extracts emails fro
 ## Usage
 
 ```bash
-node index.js
+node emailscraperv1.5.js
