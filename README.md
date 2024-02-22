@@ -41,7 +41,7 @@ Running the script will scrape emails from `https://www.companyA.com` and `https
 | Name      | Email             | Website             | Contact     | Email1                    | Email2                    |
 |-----------|-------------------|---------------------|-------------|---------------------------|---------------------------|
 | Company A | john@example.com  | https://www.companyA.com | 123-456-789 | john.doe@example.com     |                           |
-| Company B | jane@example.com  | https://www.companyB.com | 987-654-321 |                           | jane.smith@example.com    |
+| Company B | jane@example.com  | https://www.companyB.com | 987-654-321 | jane.smith@example.com                          |     |
 
 
 The modified data will be written to a new CSV file named `Leads_emails.csv`.
