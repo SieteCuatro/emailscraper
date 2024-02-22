@@ -12,7 +12,7 @@ This project is a web scraper tool developed in Node.js that extracts emails fro
 1. Install Dependencies: Run `npm install` to install the required dependencies specified in `package.json`.
 2. Configuration: Customize the configuration variables in the script (`index.js`) according to your requirements.
 3. Input CSV File: Prepare a CSV file containing a column named "Website" with the list of URLs to scrape emails from.
-4. Run: Execute the script by running `node index.js`.
+4. Run: Execute the script by running `node emailscraperv1.5.js`.
 
 ## Configuration
 - **baseURL:** Path to the input CSV file containing website URLs.
