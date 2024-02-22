@@ -27,9 +27,6 @@ This project is a web scraper tool developed in Node.js that extracts emails fro
 ## Usage
 node emailscraperv1.5.js
 
-csharp
-Copy code
-
 ## Example
 Suppose you have a CSV file named `Leads.csv` with the following structure:
 
@@ -37,17 +34,11 @@ Name,Email,Website,Contact
 Company A,john@example.com,https://www.companyA.com,123-456-789
 Company B,jane@example.com,https://www.companyB.com,987-654-321
 
-javascript
-Copy code
-
 Running the script will scrape emails from `https://www.companyA.com` and `https://www.companyB.com` and add them as new columns to the right of the existing columns:
 
 Name,Email,Website,Contact,Email1,Email2
 Company A,john@example.com,https://www.companyA.com,123-456-789,john.doe@example.com,
 Company B,jane@example.com,https://www.companyB.com,987-654-321,,jane.smith@example.com
-
-markdown
-Copy code
 
 The modified data will be written to a new CSV file named `Leads_emails.csv`.
 
