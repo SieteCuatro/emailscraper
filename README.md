@@ -30,9 +30,11 @@ node emailscraperv1.5.js
 ## Example
 Suppose you have a CSV file named `Leads.csv` with the following structure:
 
-Name,Email,Website,Contact
-Company A,john@example.com,https://www.companyA.com,123-456-789
-Company B,jane@example.com,https://www.companyB.com,987-654-321
+| Name      | Email             | Website             | Contact     |
+|-----------|-------------------|---------------------|-------------|
+| Company A | john@example.com  | https://www.companyA.com | 123-456-789 |
+| Company B | jane@example.com  | https://www.companyB.com | 987-654-321 |
+
 
 Running the script will scrape emails from `https://www.companyA.com` and `https://www.companyB.com` and add them as new columns to the right of the existing columns:
 
