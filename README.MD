@@ -15,38 +15,32 @@ This script is designed to scrape emails from websites listed in a CSV file. It 
 
 The script can be configured using the following options:
 
-- \aseURL\: The path to the input CSV file containing website URLs.
-- \delayTime\: The timeout for page navigation in milliseconds.
-- \emailFilter\: An array of strings to filter out unwanted emails.
-- \excludedDomains\: An array of domains to be ignored during scraping.
-- \excludedExtensions\: An array of file extensions to be excluded.
-- \excludedPatterns\: An array of URL patterns to be excluded.
-- \maxDepth\: The maximum depth to scrape within the same domain.
-- \concurrency\: The number of concurrent scraping processes.
-- \useRateLimiting\: Enable or disable rate limiting.
-- \useUserAgents\: Enable or disable user-agent rotation.
-- \useProxies\: Enable or disable proxy rotation.
-- \userAgents\: An array of user-agents to rotate.
-- \proxies\: An array of proxies to rotate.
+- `baseURL`: The path to the input CSV file containing website URLs.
+- `delayTime`: The timeout for page navigation in milliseconds.
+- `emailFilter`: An array of strings to filter out unwanted emails.
+- `excludedDomains`: An array of domains to be ignored during scraping.
+- `excludedExtensions`: An array of file extensions to be excluded.
+- `excludedPatterns`: An array of URL patterns to be excluded.
+- `maxDepth`: The maximum depth to scrape within the same domain.
+- `concurrency`: The number of concurrent scraping processes.
+- `useRateLimiting`: Enable or disable rate limiting.
+- `useUserAgents`: Enable or disable user-agent rotation.
+- `useProxies`: Enable or disable proxy rotation.
+- `userAgents`: An array of user-agents to rotate.
+- `proxies`: An array of proxies to rotate.
 
 ## Usage
 
 1. **Install Dependencies**:
-   \\\sh
    npm install playwright csv-parser csv-writer async-mutex limiter
-   \\\
 
 2. **Configure the Script**:
-   Edit the \config\ object at the top of the script to set your desired configuration options.
+Edit the config object at the top of the script to set your desired configuration options.
 
 3. **Run the Script**:
-   \\\sh
-   node your-script-file.js
-   \\\
+node your-script-file.js
 
-## Example Configuration
-
-\\\javascript
+**Example Configuration**
 const config = {
     baseURL: 'Leads.csv',
     delayTime: 3000,
@@ -69,25 +63,20 @@ const config = {
         'http://proxy2.example.com:8080',
     ],
 };
-\\\
 
-## Output
+**Output**
+The script will generate a CSV file named Leads_emails.csv containing the scraped emails along with the original data from the input CSV file.
 
-The script will generate a CSV file named \Leads_emails.csv\ containing the scraped emails along with the original data from the input CSV file.
+**Troubleshooting**
+Too Many Requests: If you encounter "Too Many Requests" errors, consider reducing the concurrency or enabling rate limiting.
 
-## Troubleshooting
+IP Ban: If you get banned by a website, try using a different set of proxies or reduce the scraping frequency.
 
-- **Too Many Requests**: If you encounter "Too Many Requests" errors, consider reducing the \concurrency\ or enabling rate limiting.
-- **IP Ban**: If you get banned by a website, try using a different set of proxies or reduce the scraping frequency.
+**License**
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contributing
-
+**Contributing**
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-## Contact
-
+**Contact**
 For any questions or support, please open an issue on GitHub.
