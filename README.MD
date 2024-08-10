@@ -38,7 +38,7 @@ The script can be configured using the following options:
 Edit the config object at the top of the script to set your desired configuration options.
 
 3. **Run the Script**:
-node your-script-file.js
+node emailscraperv2.js
 
 ## Example
 Suppose you have a CSV file named `Leads.csv` with the following structure:
