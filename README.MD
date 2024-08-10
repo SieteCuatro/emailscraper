@@ -40,7 +40,8 @@ Edit the config object at the top of the script to set your desired configuratio
 3. **Run the Script**:
 node your-script-file.js
 
-**Example Configuration**
+## Example Configuration
+
 const config = {
     baseURL: 'Leads.csv',
     delayTime: 3000,
