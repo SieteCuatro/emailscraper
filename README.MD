@@ -40,33 +40,24 @@ Edit the config object at the top of the script to set your desired configuratio
 3. **Run the Script**:
 node your-script-file.js
 
-## Example Configuration
+## Example
+Suppose you have a CSV file named `Leads.csv` with the following structure:
 
-const config = {
-    baseURL: 'Leads.csv',
-    delayTime: 3000,
-    emailFilter: ['@sentry-next.wixpress.com', '.png', 'sentry.io', '@sentry.wixpress.com', '@wix.com'],
-    excludedDomains: ['facebook.com', 'instagram.com', 'genealog.cl'],
-    excludedExtensions: ['.css', '.js', '.json', '.png', '.jpg', '.jpeg', '.gif', '.bmp', '.svg'],
-    excludedPatterns: ['privacy', 'terms', 'faq', 'wp-json', 'feed', 'wp-includes', 'xmlrpc', 'feed'],
-    maxDepth: 1,
-    concurrency: 5,
-    useRateLimiting: true,
-    useUserAgents: true,
-    useProxies: true,
-    userAgents: [
-        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
-        'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:54.0) Gecko/20100101 Firefox/54.0',
-        'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
-    ],
-    proxies: [
-        'http://proxy1.example.com:8080',
-        'http://proxy2.example.com:8080',
-    ],
-};
+| Name      |  Website             | Contact     |
+|-----------|---------------------|-------------|
+| Company A |  https://www.companyA.com | 123-456-789 |
+| Company B |  https://www.companyB.com | 987-654-321 |
 
-**Output**
-The script will generate a CSV file named Leads_emails.csv containing the scraped emails along with the original data from the input CSV file.
+
+Running the script will scrape emails from `https://www.companyA.com` and `https://www.companyB.com` and add them as new columns to the right of the existing columns:
+
+| Name      |  Website             | Contact     | Email1                    | Email2                    |
+|-----------|---------------------|-------------|---------------------------|---------------------------|
+| Company A | https://www.companyA.com | 123-456-789 | john.doe@example.com     |                           |
+| Company B | https://www.companyB.com | 987-654-321 | jane.smith@example.com                          |  john.notdoe@example.com   |
+
+
+The modified data will be written to a new CSV file named `Leads_emails.csv`.
 
 **Troubleshooting**
 Too Many Requests: If you encounter "Too Many Requests" errors, consider reducing the concurrency or enabling rate limiting.
